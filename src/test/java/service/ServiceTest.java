@@ -4,10 +4,10 @@ import repository.StudentXMLRepository;
 import validation.StudentValidator;
 import validation.ValidationException;
 
-class ServiceTest {
+public class ServiceTest {
 
     @org.junit.jupiter.api.Test
-    void saveStudent_Added() {
+    public void saveStudent_Added() {
 
 
         Service service = new Service(new StudentXMLRepository(new StudentValidator(),"test_students.xml"),null,null);
@@ -25,7 +25,7 @@ class ServiceTest {
     }
 
     @org.junit.jupiter.api.Test
-    void saveStudent_NotAdded() {
+    public void saveStudent_NotAdded() {
 
         Service service = new Service(new StudentXMLRepository(new StudentValidator(),"test_students.xml"),null,null);
 //        service.findAllStudents().forEach(s -> service.deleteStudent(s.getID()));
