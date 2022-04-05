@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entitati>
-    <student ID="1">
-        <Nume>Gioni Bravo</Nume>
-        <Grupa>910</Grupa>
-    </student>
-    <student ID="abc">
+    <student ID="999">
         <Nume>Gioni Bravo</Nume>
         <Grupa>910</Grupa>
     </student>
