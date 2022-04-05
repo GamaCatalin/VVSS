@@ -13,6 +13,8 @@ public class StudentServiceTest {
         Service service = new Service(new StudentXMLRepository(new StudentValidator(),"test_students.xml"),null,null);
 //        service.findAllStudents().forEach(s -> service.deleteStudent(s.getID()));
 
+        service.deleteStudent("999");
+
         int initLen[] = {0};
         service.findAllStudents().forEach(s -> initLen[0]++);
         assert(service.saveStudent("999","Gioni Bravo",910) == 1);
@@ -21,7 +23,7 @@ public class StudentServiceTest {
 
         assert(initLen[0] + 1 == finLen[0]);
 
-        service.deleteStudent("999");
+
     }
 
     @org.junit.jupiter.api.Test
@@ -29,6 +31,8 @@ public class StudentServiceTest {
 
         Service service = new Service(new StudentXMLRepository(new StudentValidator(),"test_students.xml"),null,null);
 //        service.findAllStudents().forEach(s -> service.deleteStudent(s.getID()));
+
+        service.deleteStudent("999");
 
         int initLen[] = {0};
         service.findAllStudents().forEach(s -> initLen[0]++);
@@ -42,7 +46,7 @@ public class StudentServiceTest {
         service.findAllStudents().forEach(s -> finLen[0]++);
 
         assert(initLen[0] == finLen[0]);
-        service.deleteStudent("999");
+
     }
 
 
@@ -55,6 +59,12 @@ public class StudentServiceTest {
         String name = "Gioni Bravo";
         int group = 910;
 
+        try{
+            service.deleteStudent(id);
+        }
+        catch (Exception e){
+            assert(true);
+        }
 
         int initLen[] = {0};
         service.findAllStudents().forEach(s -> initLen[0]++);
@@ -68,12 +78,7 @@ public class StudentServiceTest {
         service.findAllStudents().forEach(s -> finLen[0]++);
 
         assert(initLen[0] == finLen[0]);
-        try{
-            service.deleteStudent(id);
-        }
-        catch (Exception e){
-            assert(true);
-        }
+
     }
 
     @org.junit.jupiter.api.Test
@@ -85,6 +90,12 @@ public class StudentServiceTest {
         String name = "Gioni Bravo";
         int group = 910;
 
+        try{
+            service.deleteStudent(id);
+        }
+        catch (Exception e){
+            assert(true);
+        }
 
         int initLen[] = {0};
         service.findAllStudents().forEach(s -> initLen[0]++);
@@ -98,12 +109,7 @@ public class StudentServiceTest {
         service.findAllStudents().forEach(s -> finLen[0]++);
 
         assert(initLen[0] == finLen[0]);
-        try{
-            service.deleteStudent(id);
-        }
-        catch (Exception e){
-            assert(true);
-        }
+
     }
 
 
@@ -116,6 +122,12 @@ public class StudentServiceTest {
         String name = null;
         int group = 910;
 
+        try{
+            service.deleteStudent(id);
+        }
+        catch (Exception e){
+            assert(true);
+        }
 
         int initLen[] = {0};
         service.findAllStudents().forEach(s -> initLen[0]++);
@@ -129,12 +141,7 @@ public class StudentServiceTest {
         service.findAllStudents().forEach(s -> finLen[0]++);
 
         assert(initLen[0] == finLen[0]);
-        try{
-            service.deleteStudent(id);
-        }
-        catch (Exception e){
-            assert(true);
-        }
+
     }
 
 
@@ -147,6 +154,12 @@ public class StudentServiceTest {
         String name = "";
         int group = 910;
 
+        try{
+            service.deleteStudent(id);
+        }
+        catch (Exception e){
+            assert(true);
+        }
 
         int initLen[] = {0};
         service.findAllStudents().forEach(s -> initLen[0]++);
@@ -160,12 +173,7 @@ public class StudentServiceTest {
         service.findAllStudents().forEach(s -> finLen[0]++);
 
         assert(initLen[0] == finLen[0]);
-        try{
-            service.deleteStudent(id);
-        }
-        catch (Exception e){
-            assert(true);
-        }
+
     }
 
 
@@ -178,6 +186,12 @@ public class StudentServiceTest {
         String name = "Gioni Bravo";
         int group = 0;
 
+        try{
+            service.deleteStudent(id);
+        }
+        catch (Exception e){
+            assert(true);
+        }
 
         int initLen[] = {0};
         service.findAllStudents().forEach(s -> initLen[0]++);
@@ -191,12 +205,7 @@ public class StudentServiceTest {
         service.findAllStudents().forEach(s -> finLen[0]++);
 
         assert(initLen[0] == finLen[0]);
-        try{
-            service.deleteStudent(id);
-        }
-        catch (Exception e){
-            assert(true);
-        }
+
     }
 
 
@@ -209,7 +218,12 @@ public class StudentServiceTest {
         String name = "Gioni Bravo";
         int group = -910;
 
-
+        try{
+            service.deleteStudent(id);
+        }
+        catch (Exception e){
+            assert(true);
+        }
         int initLen[] = {0};
         service.findAllStudents().forEach(s -> initLen[0]++);
         try{
@@ -222,12 +236,7 @@ public class StudentServiceTest {
         service.findAllStudents().forEach(s -> finLen[0]++);
 
         assert(initLen[0] == finLen[0]);
-        try{
-            service.deleteStudent(id);
-        }
-        catch (Exception e){
-            assert(true);
-        }
+
     }
 
     @org.junit.jupiter.api.Test
@@ -239,7 +248,12 @@ public class StudentServiceTest {
         String name = "Gioni Bravo";
         int group = 1001;
 
-
+        try{
+            service.deleteStudent(id);
+        }
+        catch (Exception e){
+            assert(true);
+        }
         int initLen[] = {0};
         service.findAllStudents().forEach(s -> initLen[0]++);
         try{
@@ -252,12 +266,7 @@ public class StudentServiceTest {
         service.findAllStudents().forEach(s -> finLen[0]++);
 
         assert(initLen[0] == finLen[0]);
-        try{
-            service.deleteStudent(id);
-        }
-        catch (Exception e){
-            assert(true);
-        }
+
     }
 
 

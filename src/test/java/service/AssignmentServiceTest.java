@@ -12,6 +12,8 @@ public class AssignmentServiceTest {
 
         Service service = new Service(null,new TemaXMLRepository(new TemaValidator(),"test_assignment.xml"),null);
 
+        service.deleteTema("999");
+
         int initLen[] = {0};
         service.findAllTeme().forEach(s -> initLen[0]++);
         assert(service.saveTema("999","asta merge",13,7) == 1);
@@ -20,7 +22,7 @@ public class AssignmentServiceTest {
 
         assert(initLen[0] + 1 == finLen[0]);
 
-        service.deleteTema("999");
+
     }
 
 
@@ -28,6 +30,8 @@ public class AssignmentServiceTest {
     public void addAssignment_NotAdded() {
 
         Service service = new Service(null,new TemaXMLRepository(new TemaValidator(),"test_assignment.xml"),null);
+
+        service.deleteTema("999");
 
         int initLen[] = {0};
         service.findAllTeme().forEach(s -> initLen[0]++);
@@ -41,7 +45,7 @@ public class AssignmentServiceTest {
         service.findAllTeme().forEach(s -> finLen[0]++);
 
         assert(initLen[0] == finLen[0]);
-        service.deleteTema("999");
+
     }
 
 
@@ -55,7 +59,12 @@ public class AssignmentServiceTest {
         int deadline = 7;
         int startline = 13;
 
-
+        try{
+            service.deleteTema(id);
+        }
+        catch (Exception e){
+            assert(true);
+        }
 
         int initLen[] = {0};
         service.findAllTeme().forEach(s -> initLen[0]++);
@@ -69,12 +78,7 @@ public class AssignmentServiceTest {
         service.findAllTeme().forEach(s -> finLen[0]++);
 
         assert(initLen[0] == finLen[0]);
-        try{
-            service.deleteTema(id);
-        }
-        catch (Exception e){
-            assert(true);
-        }
+
     }
 
 
@@ -88,7 +92,12 @@ public class AssignmentServiceTest {
         int deadline = 7;
         int startline = 13;
 
-
+        try{
+            service.deleteTema(id);
+        }
+        catch (Exception e){
+            assert(true);
+        }
 
         int initLen[] = {0};
         service.findAllTeme().forEach(s -> initLen[0]++);
@@ -102,12 +111,7 @@ public class AssignmentServiceTest {
         service.findAllTeme().forEach(s -> finLen[0]++);
 
         assert(initLen[0] == finLen[0]);
-        try{
-            service.deleteTema(id);
-        }
-        catch (Exception e){
-            assert(true);
-        }
+
     }
 
 
@@ -122,7 +126,12 @@ public class AssignmentServiceTest {
         int deadline = 7;
         int startline = 13;
 
-
+        try{
+            service.deleteTema(id);
+        }
+        catch (Exception e){
+            assert(true);
+        }
 
         int initLen[] = {0};
         service.findAllTeme().forEach(s -> initLen[0]++);
@@ -136,12 +145,7 @@ public class AssignmentServiceTest {
         service.findAllTeme().forEach(s -> finLen[0]++);
 
         assert(initLen[0] == finLen[0]);
-        try{
-            service.deleteTema(id);
-        }
-        catch (Exception e){
-            assert(true);
-        }
+
     }
 
 
@@ -155,7 +159,12 @@ public class AssignmentServiceTest {
         int deadline = 7;
         int startline = 13;
 
-
+        try{
+            service.deleteTema(id);
+        }
+        catch (Exception e){
+            assert(true);
+        }
 
         int initLen[] = {0};
         service.findAllTeme().forEach(s -> initLen[0]++);
@@ -169,12 +178,7 @@ public class AssignmentServiceTest {
         service.findAllTeme().forEach(s -> finLen[0]++);
 
         assert(initLen[0] == finLen[0]);
-        try{
-            service.deleteTema(id);
-        }
-        catch (Exception e){
-            assert(true);
-        }
+
     }
 
 
@@ -191,7 +195,12 @@ public class AssignmentServiceTest {
         int deadline = 0;
         int startline = 13;
 
-
+        try{
+            service.deleteTema(id);
+        }
+        catch (Exception e){
+            assert(true);
+        }
 
         int initLen[] = {0};
         service.findAllTeme().forEach(s -> initLen[0]++);
@@ -205,12 +214,7 @@ public class AssignmentServiceTest {
         service.findAllTeme().forEach(s -> finLen[0]++);
 
         assert(initLen[0] == finLen[0]);
-        try{
-            service.deleteTema(id);
-        }
-        catch (Exception e){
-            assert(true);
-        }
+
     }
 
 
@@ -224,7 +228,12 @@ public class AssignmentServiceTest {
         int deadline = 15;
         int startline = 13;
 
-
+        try{
+            service.deleteTema(id);
+        }
+        catch (Exception e){
+            assert(true);
+        }
 
         int initLen[] = {0};
         service.findAllTeme().forEach(s -> initLen[0]++);
@@ -238,12 +247,7 @@ public class AssignmentServiceTest {
         service.findAllTeme().forEach(s -> finLen[0]++);
 
         assert(initLen[0] == finLen[0]);
-        try{
-            service.deleteTema(id);
-        }
-        catch (Exception e){
-            assert(true);
-        }
+
     }
 
 
@@ -259,7 +263,12 @@ public class AssignmentServiceTest {
         int deadline = 13;
         int startline = 0;
 
-
+        try{
+            service.deleteTema(id);
+        }
+        catch (Exception e){
+            assert(true);
+        }
 
         int initLen[] = {0};
         service.findAllTeme().forEach(s -> initLen[0]++);
@@ -273,12 +282,7 @@ public class AssignmentServiceTest {
         service.findAllTeme().forEach(s -> finLen[0]++);
 
         assert(initLen[0] == finLen[0]);
-        try{
-            service.deleteTema(id);
-        }
-        catch (Exception e){
-            assert(true);
-        }
+
     }
 
 
@@ -292,7 +296,12 @@ public class AssignmentServiceTest {
         int deadline = 20;
         int startline = 15;
 
-
+        try{
+            service.deleteTema(id);
+        }
+        catch (Exception e){
+            assert(true);
+        }
 
         int initLen[] = {0};
         service.findAllTeme().forEach(s -> initLen[0]++);
@@ -306,12 +315,7 @@ public class AssignmentServiceTest {
         service.findAllTeme().forEach(s -> finLen[0]++);
 
         assert(initLen[0] == finLen[0]);
-        try{
-            service.deleteTema(id);
-        }
-        catch (Exception e){
-            assert(true);
-        }
+
     }
 
 
@@ -325,7 +329,12 @@ public class AssignmentServiceTest {
         int deadline = 7;
         int startline = 13;
 
-
+        try{
+            service.deleteTema(id);
+        }
+        catch (Exception e){
+            assert(true);
+        }
 
         int initLen[] = {0};
         service.findAllTeme().forEach(s -> initLen[0]++);
@@ -339,12 +348,7 @@ public class AssignmentServiceTest {
         service.findAllTeme().forEach(s -> finLen[0]++);
 
         assert(initLen[0] == finLen[0]);
-        try{
-            service.deleteTema(id);
-        }
-        catch (Exception e){
-            assert(true);
-        }
+
     }
 
 
